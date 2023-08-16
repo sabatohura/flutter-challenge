@@ -84,13 +84,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             hintText: "Date of Birth",
                             obsecureText: false,
                             onTap: selectDate),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 20),
                         const Text(
                           "Get a Nike Member Reward every year on your birthday  ",
                           style: TextStyle(fontSize: 15),
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 6),
                         FormDropDownField(
                             items: countryOptions,
                             selectedValue: selectedCountry)

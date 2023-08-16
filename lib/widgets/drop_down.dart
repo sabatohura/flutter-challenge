@@ -24,6 +24,9 @@ class _FormDropDownFieldState extends State<FormDropDownField> {
           var selectedValue = newValue!;
         });
       },
+      icon: const Icon(
+        Icons.keyboard_arrow_down,
+      ),
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 15),
         fillColor: Colors.black,
