@@ -1,6 +1,9 @@
+import 'package:challenge/widgets/button.dart';
+import 'package:challenge/widgets/checkbox.dart';
 import 'package:challenge/widgets/date_picker.dart';
 import 'package:challenge/widgets/drop_down.dart';
 import 'package:challenge/widgets/text_field.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -38,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 children: [
                   const SizedBox(
-                    height: 25,
+                    height: 15,
                   ),
                   Center(
                     child: Column(
@@ -66,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         const SizedBox(
-                          height: 20,
+                          height: 15,
                         ),
                         const MyTextField(
                             hintText: "Email Address", obsecureText: false),
@@ -96,8 +99,62 @@ class _HomeScreenState extends State<HomeScreen> {
                           selectedValue: selectedCountry,
                         ),
                         const SizedBox(height: 10),
-                        Row(
-                          children: [],
+                        const MyCheckboxFormField(
+                            value: false,
+                            label:
+                                "Sign Up for emails to get updates from Nike on products. offers and your Member benefit"),
+                        const SizedBox(height: 10),
+                        Center(
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: TextSpan(
+                              text:
+                                  'By creating an Account, you agree to Nike\'s ',
+                              style: const TextStyle(
+                                  color: Colors.black, fontSize: 12),
+                              children: <TextSpan>[
+                                TextSpan(
+                                    text: 'Privacy and Policy',
+                                    style: const TextStyle(
+                                      fontSize: 12,
+                                      decoration: TextDecoration.underline,
+                                    ),
+                                    recognizer: TapGestureRecognizer()),
+                                const TextSpan(
+                                    text: ' and ',
+                                    style: TextStyle(fontSize: 12)),
+                                TextSpan(
+                                    text: 'Term of Use',
+                                    style: const TextStyle(
+                                      fontSize: 12,
+                                      decoration: TextDecoration.underline,
+                                    ),
+                                    recognizer: TapGestureRecognizer()),
+                              ],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Button(buttonText: "JOIN US"),
+                        const SizedBox(
+                          height: 12,
+                        ),
+                        RichText(
+                          textAlign: TextAlign.center,
+                          text: const TextSpan(
+                              text: "Already Member?",
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 12),
+                              children: <TextSpan>[
+                                TextSpan(
+                                    text: " Sign In",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w500,
+                                        decoration: TextDecoration.underline))
+                              ]),
                         )
                       ],
                     ),
